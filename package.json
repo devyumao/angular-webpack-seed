@@ -1,0 +1,20 @@
+{
+    "name": "ncop",
+    "version": "0.0.1",
+    "description": "Nuomi Componentization Open Platform",
+    "author": "yumao",
+    "scripts": {
+        "test": "echo \"DONE.\"",
+        "watch": "node node_modules/.bin/webpack-dev-server --content-base asset --port 8081"
+    },
+    "devDependencies": {
+        "ng-cache-loader": "^0.0.9",
+        "css-loader": "^0.15.3",
+        "less-loader": "^2.2.0",
+        "style-loader": "^0.12.3",
+        "webpack": "^1.10.1",
+        "webpack-dev-server": "^1.10.1"
+    },
+    "dependencies": {
+    }
+}
