@@ -8,6 +8,7 @@
         "watch": "node node_modules/.bin/webpack-dev-server --content-base asset --port 8081"
     },
     "devDependencies": {
+        "url-loader": "^0.5.6",
         "file-loader": "^0.8.4",
         "ng-cache-loader": "^0.0.9",
         "css-loader": "^0.15.3",

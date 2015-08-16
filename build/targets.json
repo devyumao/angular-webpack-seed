@@ -1,0 +1,37 @@
+{
+
+    "yanghanxing": {
+        "rdtest": "http://cq01-rdqa-dev056.cq01.baidu.com:8190",
+        "odpdir": "/home/users/yanghanxing/odp_main"
+    },
+
+    "qiuliang": {
+        "rdtest": "http://10.46.189.51:8190",
+        "odpdir": "/home/users/qiuliang/disk02/odp_main"
+    },
+
+    "zhichao": {
+        "rdtest": "http://cp01-rdqa-dev094.cp01.baidu.com:8190",
+        "odpdir": "/home/users/mazhichao/odp_main"
+    },
+
+    "weilong": {
+        "rdtest": "http://cq01-rdqa-dev060.cq01.baidu.com:8190",
+        "odpdir": "/home/users/zengweilong/odp_main"
+    },
+
+    "panpan": {
+        "rdtest": "http://cq01-rdqa-dev059.cq01.baidu.com:8190",
+        "odpdir": "/home/users/wupanpan/odp_main"
+    },
+
+    "guodong": {
+        "rdtest": "http://10.205.181.50:8190",
+        "odpdir": "/home/work/odp_main"
+    },
+
+    "jiarong": {
+        "rdtest": "http://cp01-rdqa-dev156.cp01.baidu.com:8190",
+        "odpdir": "/home/users/zhaojiarong/nuomi/environ/webapp_odp"
+    }
+}

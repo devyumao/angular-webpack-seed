@@ -17,6 +17,8 @@ define(function (require) {
         'ngSanitize'
     ]);
 
-    app.config(require('./public/route'));
+    require('public/style/main.less');
+
+    app.config(require('public/route'));
 
 });

@@ -65,19 +65,23 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: 'style!css'
             },
             {
                 test: /\.less$/,
-                loader: 'style-loader!css-loader!less-loader'
+                loader: 'style!css!less'
             },
             {
                 test: /\.html$/,
-                loader: 'ng-cache-loader'
+                loader: 'ng-cache'
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url' // dev
             },
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
-                loader: 'file-loader?name=res/[name].[ext]?[hash]'
+                loader: 'file?name=font/[name].[ext]?[hash]'
             }
         ],
         noParse: [
