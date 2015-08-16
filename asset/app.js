@@ -15,7 +15,8 @@ webpackJsonp([0],[
 	    });
 
 	    var app = angular.module('ncop', [
-	        'ui.router'
+	        'ui.router',
+	        'ui.bootstrap'
 	    ]);
 
 	    app.config(__webpack_require__(2));

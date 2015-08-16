@@ -19,12 +19,32 @@ var PATHS = {
     ASSET: absPath('asset')
 };
 
+var depAlias = {
+    'jquery': 'jquery/jquery.min.js',
+    'angular': 'angular/angular.min.js',
+    'angular-ui-router': 'angular-ui-router/angular-ui-router.min.js',
+    'angular-sanitize': 'angular-sanitize/angular-sanitize.min.js',
+    'bootstrap': 'bootstrap/css/bootstrap.min.css',
+    'angular-bootstrap': 'angular-bootstrap/angular-bootstrap.min.js'
+};
+
+for (var dep in depAlias) {
+    depAlias[dep] = path.resolve(PATHS.DEP, depAlias[dep]);
+}
+
 module.exports = {
     context: PATHS.SRC,
 
     entry: {
         app: './app.js',
-        base: ['jquery', 'angular', 'angular-ui-router']
+        base: [
+            'jquery',
+            'angular',
+            'angular-ui-router',
+            'angular-sanitize',
+            'bootstrap',
+            'angular-bootstrap'
+        ]
     },
 
     output: {
@@ -38,23 +58,26 @@ module.exports = {
 
     resolve: {
         root: PATHS.SRC,
-        // TODO: general
-        alias: {
-            'jquery': path.resolve(PATHS.DEP, 'jquery/jquery.min.js'),
-            'angular': path.resolve(PATHS.DEP, 'angular/angular.min.js'),
-            'angular-ui-router': path.resolve(PATHS.DEP, 'angular-ui-router/angular-ui-router.min.js')
-        }
+        alias: depAlias
     },
 
     module: {
         loaders: [
             {
-                test: /\.html$/,
-                loader: 'ng-cache-loader'
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.less$/,
                 loader: 'style-loader!css-loader!less-loader'
+            },
+            {
+                test: /\.html$/,
+                loader: 'ng-cache-loader'
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+                loader: 'file-loader?name=res/[name].[ext]?[hash]'
             }
         ],
         noParse: [

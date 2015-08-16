@@ -4,6 +4,7 @@
  */
 
 define(function (require) {
+
     require('./home.html');
     require('./home.less');
 
@@ -12,4 +13,5 @@ define(function (require) {
 
     return angular.module('ncop')
         .controller('HomeController', controller);
+
 });

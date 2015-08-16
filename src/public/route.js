@@ -4,6 +4,7 @@
  */
 
 define(function (require) {
+
     require('business/home');
 
     config.$inject = [
@@ -26,4 +27,5 @@ define(function (require) {
     }
 
     return config;
+
 });

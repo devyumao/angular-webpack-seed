@@ -4,6 +4,7 @@
  */
 
 define(function (require) {
+
     global.$ = global.jQuery = require('jquery');
 
     angular.element(document).ready(function () {
@@ -11,8 +12,11 @@ define(function (require) {
     });
 
     var app = angular.module('ncop', [
-        'ui.router'
+        'ui.router',
+        'ui.bootstrap',
+        'ngSanitize'
     ]);
 
     app.config(require('./public/route'));
+
 });
